@@ -2,6 +2,7 @@ DROP TABLE vbvscs;
 CREATE TABLE vbvscs (
 	id INT IDENTITY PRIMARY KEY,
 	url NVARCHAR(450) NOT NULL UNIQUE,
+	title NVARCHAR(255) NOT NULL,
 	salary MONEY NOT NULL CHECK(salary > 0),
 	lang CHAR(2) CHECK(lang IN ('VB','CS')),
 	username CHAR(11) NOT NULL,
